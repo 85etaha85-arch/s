@@ -3,7 +3,23 @@ const yesBtn = document.getElementById('yesBtn');
 const title = document.querySelector('.title');
 const gifImage = document.getElementById('gif');
 
-// (İsteğe bağlı) Orijinal videodaki kalp yağmuru fonksiyonu
+// NO butonunun her yere (ekranın rastgele noktalarına) kaçması için güncellenen fonksiyon
+function dodge() {
+    const windowWidth = window.innerWidth - 100;
+    const windowHeight = window.innerHeight - 50;
+    
+    const randomX = Math.floor(Math.random() * windowWidth);
+    const randomY = Math.floor(Math.random() * windowHeight);
+    
+    noBtn.style.position = 'fixed';
+    noBtn.style.left = randomX + 'px';
+    noBtn.style.top = randomY + 'px';
+}
+
+noBtn.addEventListener('mouseover', dodge);
+noBtn.addEventListener('click', dodge);
+
+// Kalp yağmuru: Daha yavaş (6 saniyede düşüyor) ve daha seyrek (700 milisaniyede bir)
 function rainHearts() {
     setInterval(() => {
         const heart = document.createElement('div');
@@ -11,9 +27,9 @@ function rainHearts() {
         heart.style.position = 'fixed';
         heart.style.left = Math.random() * window.innerWidth + 'px';
         heart.style.top = '-20px';
-        heart.style.fontSize = (Math.random() * 15 + 10) + 'px';
-        heart.style.zIndex = '1000';
-        heart.style.transition = 'top 3s linear, opacity 3s linear';
+        heart.style.fontSize = (Math.random() * 15 + 12) + 'px';
+        heart.style.zIndex = '1';
+        heart.style.transition = 'top 6s linear, opacity 6s linear'; // Süre uzatıldı (Daha yavaş)
         document.body.appendChild(heart);
 
         setTimeout(() => {
@@ -23,20 +39,9 @@ function rainHearts() {
 
         setTimeout(() => {
             heart.remove();
-        }, 3000);
-    }, 300);
+        }, 6000);
+    }, 700); // Aralık açıldı (Daha az sayıda kalp)
 }
-
-function dodge() {
-    const x = Math.random() * 150 - 75;
-    const y = Math.random() * 100 - 50;
-    noBtn.style.position = 'absolute';
-    noBtn.style.left = x + 'px';
-    noBtn.style.top = y + 'px';
-}
-
-noBtn.addEventListener('mouseover', dodge);
-noBtn.addEventListener('click', dodge);
 
 yesBtn.onclick = () => {
     title.textContent = 'Biliyodum kabul edeginiiii🥰😘';
@@ -46,8 +51,8 @@ yesBtn.onclick = () => {
     subNote.textContent = '(kesinlikle zorla evete basmadın😜😜)';
     title.after(subNote);
 
-    // Evete basınca çıkacak hata vermeyen mutlu GIF
-    gifImage.src = 'https://media.giphy.com/media/T1WqKkLY753dZghbu6/giphy.gif';
+    // EVET'e basınca çıkan o komik adam yerine tatlı, sevinen bir kedi GIF'i
+    gifImage.src = 'https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif';
 
     document.querySelector('.buttons').style.display = 'none';
     rainHearts();

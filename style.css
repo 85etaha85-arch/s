@@ -4,46 +4,43 @@
 }
 
 body {
-    /* Videodaki yumuşak pembe tonu ve arka plan deseni */
-    background-color: #ffd1dc;
-    background-image: radial-gradient(#ffb6c1 15%, transparent 16%), radial-gradient(#ffb6c1 15%, transparent 16%);
-    background-size: 30px 30px;
-    background-position: 0 0, 15px 15px;
-    
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     font-family: monospace;
+    overflow: hidden; /* Kalpler ekran dışına taşmasın */
 }
 
 .window {
     border: 4px solid var(--coral);
     border-radius: 12px;
-    background: #fff0f3;
+    background: #fff9fb;
     padding: 25px;
     width: 320px;
     text-align: center;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
 }
 
 .titlebar {
     font-weight: bold;
     margin-bottom: 15px;
     color: var(--red);
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 1px;
 }
 
 .title {
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     line-height: 1.4;
 }
 
-/* İstediğin alt yazı için eklenen stil (küçük font ve parantezli) */
 .subtitle-note {
     font-size: 11px;
     color: #777;
@@ -57,7 +54,7 @@ body {
     gap: 15px;
     position: relative;
     height: 50px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 button {
@@ -72,10 +69,6 @@ button {
 }
 
 .btn--no {
-    position: relative;
-    transition: left .18s, top .18s;
-}
-
-#cat {
-    margin-top: 10px;
+    position: absolute; /* Her yöne rahatça kaçabilmesi için absolute yaptık */
+    transition: all 0.1s ease;
 }
