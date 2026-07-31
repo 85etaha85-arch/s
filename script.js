@@ -18,7 +18,7 @@ function dodge() {
 noBtn.addEventListener('mouseover', dodge);
 noBtn.addEventListener('click', dodge);
 
-// Kalpler: Bayağı yavaş (20 saniye) ve bol miktarda
+// Kalpler: 30 saniye slow-motion akış
 function rainHearts() {
     setInterval(() => {
         const heart = document.createElement('div');
@@ -28,18 +28,18 @@ function rainHearts() {
         heart.style.top = '-30px';
         heart.style.fontSize = (Math.random() * 22 + 12) + 'px';
         heart.style.zIndex = '1';
-        heart.style.transition = 'top 20s linear, opacity 20s linear'; // 20 saniye slow-motion
+        heart.style.transition = 'top 30s linear, opacity 30s linear';
         document.body.appendChild(heart);
 
         setTimeout(() => {
             heart.style.top = window.innerHeight + '30px';
             heart.style.opacity = '0';
-        }, 50);
+        }, 100);
 
         setTimeout(() => {
             heart.remove();
-        }, 20000);
-    }, 200); // Bol bol kalp üretimi
+        }, 30000);
+    }, 250);
 }
 
 yesBtn.onclick = () => {
@@ -50,8 +50,8 @@ yesBtn.onclick = () => {
     subNote.textContent = '(kesinlikle zorla evete basmadın😜😜)';
     title.after(subNote);
 
-    // EVET'e basınca kesin çalışan garanti mutlu kedi GIF'i
-    gifImage.src = 'https://media4.giphy.com/media/ICOgUNjpvO0PC/giphy.gif';
+    // EVET'e basınca açılan, kesinlikle hata vermeyen alternatif çalışan kedi GIF'i
+    gifImage.src = 'https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif';
 
     document.querySelector('.buttons').style.display = 'none';
     rainHearts();
