@@ -14,7 +14,7 @@ noBtn.addEventListener('mouseover', dodge);
 noBtn.addEventListener('click', dodge);
 
 yesBtn.onclick = () => {
-    title.textContent = 'Yippee! i love you';
+    title.textContent = 'Biliyodum kabul ediceğiniii🥳🥳';
     
     // İstediğin eklenti: Yippee yazısının altında küçük parantezli yazı
     let subNote = document.createElement('div');
