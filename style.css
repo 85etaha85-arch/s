@@ -1,0 +1,20 @@
+/* tokens + window */
+:root {
+  --coral: #d97b73;
+  --red: #e23b4e;
+}
+
+.window {
+  border: 5px solid var(--coral);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 300px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.btn--no {
+  position: relative;
+  transition: left .18s, top .18s;
+}
