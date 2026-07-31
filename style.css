@@ -1,20 +1,68 @@
-/* tokens + window */
 :root {
-  --coral: #d97b73;
-  --red: #e23b4e;
+    --coral: #d97b73;
+    --red: #e23b4e;
+}
+
+body {
+    background-color: #fce4ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: monospace;
 }
 
 .window {
-  border: 5px solid var(--coral);
-  border-radius: 12px;
-  padding: 20px;
-  max-width: 300px;
-  margin: 50px auto;
-  text-align: center;
-  font-family: sans-serif;
+    border: 5px solid var(--coral);
+    border-radius: 12px;
+    background: #fff0f3;
+    padding: 20px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.titlebar {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--red);
+}
+
+.title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* İstediğin alt yazı için eklenen stil */
+.subtitle-note {
+    font-size: 11px;
+    color: #777;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+    height: 50px;
+}
+
+button {
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--red);
+    color: white;
 }
 
 .btn--no {
-  position: relative;
-  transition: left .18s, top .18s;
+    position: relative;
+    transition: left .18s, top .18s;
 }
