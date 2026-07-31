@@ -41,18 +41,14 @@ noBtn.addEventListener('click', dodge);
 yesBtn.onclick = () => {
     title.textContent = 'Biliyodum kabul edeginiiii🥰😘';
     
-    // İstediğin eklenti: Yippee yazısının altında küçük parantezli yazı
     let subNote = document.createElement('div');
     subNote.className = 'subtitle-note';
     subNote.textContent = '(kesinlikle zorla evete basmadın😜😜)';
     title.after(subNote);
 
-    // Eylem: 'EVET'e basınca GIF'i daha da tatlı bir versiyonuyla değiştir (Örnek link)
-    gifImage.src = 'https://i.imgur.com/u1uM2y8.gif'; // Buraya daha mutlu bir GIF linki koy
+    // Evete basınca çıkacak hata vermeyen mutlu GIF
+    gifImage.src = 'https://media.giphy.com/media/T1WqKkLY753dZghbu6/giphy.gif';
 
-    // Butonları gizle
     document.querySelector('.buttons').style.display = 'none';
-    
-    // Kalp yağmurunu başlat
     rainHearts();
 };
