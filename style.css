@@ -4,7 +4,12 @@
 }
 
 body {
-    background-color: #fce4ec;
+    /* Videodaki yumuşak pembe tonu ve arka plan deseni */
+    background-color: #ffd1dc;
+    background-image: radial-gradient(#ffb6c1 15%, transparent 16%), radial-gradient(#ffb6c1 15%, transparent 16%);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,28 +19,31 @@ body {
 }
 
 .window {
-    border: 5px solid var(--coral);
+    border: 4px solid var(--coral);
     border-radius: 12px;
     background: #fff0f3;
-    padding: 20px;
+    padding: 25px;
     width: 320px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .titlebar {
     font-weight: bold;
     margin-bottom: 15px;
     color: var(--red);
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
 .title {
     font-size: 18px;
     color: #333;
     margin-bottom: 20px;
+    line-height: 1.4;
 }
 
-/* İstediğin alt yazı için eklenen stil */
+/* İstediğin alt yazı için eklenen stil (küçük font ve parantezli) */
 .subtitle-note {
     font-size: 11px;
     color: #777;
@@ -49,10 +57,11 @@ body {
     gap: 15px;
     position: relative;
     height: 50px;
+    margin-top: 20px;
 }
 
 button {
-    padding: 8px 20px;
+    padding: 8px 25px;
     font-size: 14px;
     font-weight: bold;
     border: none;
@@ -65,4 +74,8 @@ button {
 .btn--no {
     position: relative;
     transition: left .18s, top .18s;
+}
+
+#cat {
+    margin-top: 10px;
 }
