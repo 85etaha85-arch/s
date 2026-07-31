@@ -43,7 +43,7 @@ function rainHearts() {
 }
 
 yesBtn.onclick = () => {
-    title.textContent = 'Biliyodum kabul edeginiiii🥰😘';
+    title.textContent = 'Biliyodum kabul ediceginiiii🥰😘';
     
     let subNote = document.createElement('div');
     subNote.className = 'subtitle-note';
