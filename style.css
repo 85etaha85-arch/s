@@ -11,7 +11,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: monospace;
-    overflow: hidden; /* Kalpler ekran dışına taşmasın */
+    overflow: hidden;
 }
 
 .window {
@@ -48,13 +48,14 @@ body {
     margin-bottom: 15px;
 }
 
+/* Butonların üst üste binmemesi için düzgün flex yapısı */
 .buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
-    position: relative;
-    height: 50px;
     margin-top: 15px;
+    position: relative;
+    min-height: 40px;
 }
 
 button {
@@ -69,6 +70,5 @@ button {
 }
 
 .btn--no {
-    position: absolute; /* Her yöne rahatça kaçabilmesi için absolute yaptık */
-    transition: all 0.1s ease;
+    transition: transform 0.1s ease;
 }
