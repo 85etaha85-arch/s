@@ -48,7 +48,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* Butonların üst üste binmemesi için düzgün flex yapısı */
 .buttons {
     display: flex;
     justify-content: center;
