@@ -50,8 +50,8 @@ yesBtn.onclick = () => {
     subNote.textContent = '(kesinlikle zorla evete basmadın😜😜)';
     title.after(subNote);
 
-    // EVET'e basınca açılan, kesinlikle hata vermeyen alternatif çalışan kedi GIF'i
-    gifImage.src = 'https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif';
+    // Kesinlikle hata vermeyen ve engellenmeyen doğrudan görsel linki
+    gifImage.src = 'https://i.imgur.com/4M34hi2.gif';
 
     document.querySelector('.buttons').style.display = 'none';
     rainHearts();
